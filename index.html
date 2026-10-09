@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كل سنة وأنتي طيبة يا مريومتي ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, #2b1055, #7597de);
+            color: #fff;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+        /* شاشة الباسورد */
+        #lock-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a0b2e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            transition: opacity 0.5s ease;
+        }
+        .lock-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 90%;
+            width: 350px;
+        }
+        input[type="password"] {
+            width: 80%;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 25px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+        }
+        button {
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            background: #ff477e;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff2a6d;
+        }
+        /* محتوى الموقع الأساسي */
+        .main-content {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1.5s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 28px;
+            color: #ff8fab;
+            margin-bottom: 10px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #f1f1f1;
+        }
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        .gallery img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ff8fab;
+        }
+        .error-msg {
+            color: #ff6b6b;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شاشة إدخال الباسورد (تاريخ الميلاد: 26102008) -->
+    <div id="lock-screen">
+        <div class="lock-box">
+            <h2>ممنوع الدخول إلا لمريومتي ❤️</h2>
+            <p style="font-size: 14px; color: #ddd;">اكتبي تاريخ ميلادك (DDMMYYYY) عشان تفتحي الهدية:</p>
+            <input type="password" id="passcode" placeholder="الباسورد هنا...">
+            <br>
+            <button onclick="checkPassword()">دخول ❤️</button>
+            <div id="error" class="error-msg"></div>
+        </div>
+    </div>
+
+    <!-- محتوى الموقع بعد فتح القفل -->
+    <div class="main-content" id="content">
+        <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
+        
+        <div class="card">
+            <p>
+                حقك عليا.. أنا أسف إني زعلتك النهارده. مايهونش عليّ زعلتيك ولا أطول أشوفك زعلانة أبداً. 
+                حبيت أبدأ أعملك المفاجأة دي من دلوقتي عشان أعبر لك عن حبي، وعشان تكوني عارفة إنك غالية أوي عندي ومش بحب أشوفك متضايقة.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ذكرى ميلادك المميز</h3>
+            <p>📅 تاريخ الميلاد: <strong>26 / 10 / 2008</strong></p>
+            <p>أجمل يوم في الدنيا اللي جابت أحمل وألطف بنوحة في الكون.</p>
+        </div>
+
+        <div class="card">
+            <h3>ذكرياتنا الحلوة 📸</h3>
+            <div class="gallery">
+                <!-- الصورة اللي رفعتها -->
+                <img src="IMG_5862.jpeg" alt="صورة مريومة">
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>أغنية لعيونك 🎶</h3>
+            <audio controls style="width: 100%; margin-top: 10px;">
+                <source src="IMG_6276.mp3" type="audio/mpeg">
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const pass = document.getElementById('passcode').value;
+            const errorDiv = document.getElementById('error');
+            
+            // الباسورد المطلوب هو 26102008
+            if (pass === '26102008') {
+                document.getElementById('lock-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('lock-screen').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, 500);
+            } else {
+                errorDiv.innerText = 'الباسورد غلط يا مريومة! جربي تاني (تاريخ ميلادك)';
+            }
+        }
+    </script>
+
+</body>
+</html>
